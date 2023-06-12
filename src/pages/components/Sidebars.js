@@ -11,7 +11,7 @@ export default [
         icon: <FaHome size="28" />,
         text: "Home",
         id: 2,
-        on: false
+        on: true
     },
     {
         icon: <FaInfo size="28" />,
