@@ -2,6 +2,7 @@ import '@/styles/globals.css'
 import Layout from '../components/Layout'
 import Head from 'next/head'
 import { Open_Sans } from 'next/font/google'
+import { Analytics } from "@vercel/analytics/react"
 
 const openSans = Open_Sans({
   subsets:['latin'],
@@ -29,6 +30,7 @@ export default function App({ Component, pageProps }) {
       <Layout>
         <main className={openSans.className}>
             <Component {...pageProps} />
+            <Analytics />
         </main>
       </Layout>
     </>
