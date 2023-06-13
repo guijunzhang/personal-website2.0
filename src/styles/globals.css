@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.odd-shape {
+    border-radius: 66% 34% 68% 32% / 74% 77% 23% 26%;
+}
+
 @layer components {
     .sidebar-icon {
         @apply relative flex items-center justify-center 
@@ -40,5 +44,8 @@
     }
     span {
         @apply text-accented2 font-medium
+    }
+    a {
+        @apply text-[#c6c599] font-medium
     }
 }

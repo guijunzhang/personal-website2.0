@@ -1,7 +1,9 @@
 import { FaGraduationCap, FaRegLightbulb } from "react-icons/fa";
 import { BsUniversalAccess } from "react-icons/bs"
-
-import MenuDivider from "@/components/MenuDivider";
+import Link from 'next/link'
+import Image from 'next/image'
+import profilePicture from '/public/fox.jpg'
+import MenuDivider from "@/components/MenuDivider"
 export default function About() {
     return (
         <div className="glass">
@@ -23,9 +25,16 @@ export default function About() {
                 </div>
             </div>
             <br />
-            <p>I'm a front-end developer specialized in UX design based in Tempe, AZ.</p>
-            <p>I aim to make information <span>more accessible</span> and promote education <span>for all</span>, <br/>while making the world <span>more creative and entertaining</span>.</p>
-            <h2>Let's create a better world!</h2>
+            <div className="flex flex-row justify-center">
+                <div className="flex justify-center px-4">
+                    <Image className="object-cover odd-shape"src={profilePicture} width={250} height={250} alt="placeholder picture of a fox for my picture" />
+                </div>
+                <div className="flex flex-col justify-center w-90 px-4">
+                    <p>I'm a front-end developer specialized in UX design based in Tempe, AZ.</p>
+                    <p>I aim to make information <span>more accessible</span> and promote education <span>for all</span>, <br/>while making the world <span>more creative and entertaining</span>.</p>
+                    <Link href="/contact"><h2>Let's create a better world!</h2></Link>
+                </div>
+            </div>
         </div>
     )
 }
