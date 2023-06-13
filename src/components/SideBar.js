@@ -23,6 +23,7 @@ export default function SideBar() {
             id={tab.id}
             on={tab.on} 
             toggle={() => toggle(tab.id)}
+            dir={tab.dir}
         />
     ))
     const mainSidebar = tabs.slice(1).map(tab => (
@@ -32,6 +33,7 @@ export default function SideBar() {
             id={tab.id}
             on={tab.on}
             toggle={() => toggle(tab.id)}
+            dir={tab.dir}
         />
     ))
     
