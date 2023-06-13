@@ -4,6 +4,7 @@ export default function Projects() {
         <div className="glass">
           <h1>Project page</h1>
           <MenuDivider />
+          
         </div>
     )
 }
