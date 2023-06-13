@@ -26,6 +26,7 @@ module.exports = {
         contrast: '#798071', /* This color code represents a dark shade. 
                                 It could be used for text or footer elements 
                                 to provide contrast against lighter backgrounds. */
+        valid: '#39FF14',
       }
     },
   },

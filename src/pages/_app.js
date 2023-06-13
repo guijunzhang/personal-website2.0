@@ -1,5 +1,11 @@
 import '@/styles/globals.css'
 import Head from 'next/head'
+import { Open_Sans } from 'next/font/google'
+
+const openSans = Open_Sans({
+  subsets:['latin'],
+  weight: '400'
+})
 
 export default function App({ Component, pageProps }) {
   return (
@@ -18,7 +24,9 @@ export default function App({ Component, pageProps }) {
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
-    <Component {...pageProps} />
+      <main className={openSans.className}>
+        <Component {...pageProps} />
+      </main>
     </>
   )
 }
