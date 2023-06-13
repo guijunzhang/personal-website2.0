@@ -1,10 +1,9 @@
 import MenuDivider from "@/components/MenuDivider";
-export default function Contact() {
+export default function Projects() {
     return (
         <div className="glass">
-          <h1>Contact Page</h1>
+          <h1>Project page</h1>
           <MenuDivider />
         </div>
     )
-  }
-  
+}

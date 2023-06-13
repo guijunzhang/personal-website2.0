@@ -7,18 +7,38 @@
         @apply relative flex items-center justify-center 
                h-12 w-12 my-2 mx-auto shadow-lg 
                bg-white text-contrast
-               hover:bg-contrast hover:text-white
+               hover:bg-accented2 hover:text-white
                rounded-3xl hover:rounded-xl transition-all duration-100 ease-linear cursor-pointer;        
     }
     .sidebar-tooltip {
         @apply absolute w-auto p-2 m-2 min-w-max left-14 
                rounded-md shadow-md 
-               text-white bg-contrast 
-               text-xs font-bold 
-               transition-all duration-100 scale-0 origin-left;
+               text-black bg-contrast 
+               text-sm
+               transition-all duration-100 scale-0 origin-left
     }
     .pill {
         @apply absolute w-2 h-6 top-1/2 bg-contrast rounded-[6px]
-        translate-x-[-425%] translate-y-[-50%] scale-0 transition-all duration-100 ease-linear;
+        translate-x-[-425%] translate-y-[-50%] scale-0 transition-all duration-100 ease-linear
+    }
+    .glass {
+        @apply w-[90%] my-16 mx-auto 
+        bg-[rgba(255,255,255,0.4)] border-[rgba(255,255,255,0.2)] 
+        border-solid border-[1px] p-16 rounded-xl
+    }
+    .ch {
+        @apply flex flex-row justify-center items-center
+    }
+    h1 {
+        @apply text-2xl py-2 ch
+    }
+    h2 {
+        @apply text-xl
+    }
+    p {
+        @apply text-base
+    }
+    span {
+        @apply text-accented2 font-medium
     }
 }

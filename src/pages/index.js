@@ -1,7 +1,9 @@
-export default function Home() {
+
+export default function Root() {
+  
   return (
-      <div>
-          <h1>Hi There!!!</h1>
-      </div>
+    <div className="glass">
+      <h1>👷 Coming soon...</h1>
+    </div>
   )
 }

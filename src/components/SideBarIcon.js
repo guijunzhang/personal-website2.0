@@ -5,7 +5,7 @@ export default function SideBarIcon(props) {
         <Link href={"/" + `${props.dir}`}>
             <div 
                 className={
-                    "sidebar-icon group hover:bg-accented2 " + 
+                    "sidebar-icon group " + 
                     (props.on ? "rounded-xl" : "")
                 }
                 onClick={props.toggle}>
@@ -18,7 +18,7 @@ export default function SideBarIcon(props) {
                     
                 </div>
                 {props.icon}
-                <span className="sidebar-tooltip bg-accented2 group-hover:scale-100">
+                <span className="sidebar-tooltip bg-white group-hover:scale-100">
                     {props.text}
                 </span>
                 

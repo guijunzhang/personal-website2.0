@@ -1,33 +1,20 @@
-import { FaHome, FaInfo, FaPlus, FaCube } from 'react-icons/fa';
+import { FaHome, FaInfo, FaPlus, FaCoffee, FaFolder } from 'react-icons/fa';
 
+function createMenuItem(icon, text, id, on, dir) {
+    return {
+        icon,
+        text,
+        id,
+        on,
+        dir
+    };
+  }
 
 export default [
-    {
-        icon: <FaCube size="28" />,
-        text: "Hi There! I am Guijun 😄",
-        id: 1,
-        on: true,
-        dir: ''
-    },
-    {
-        icon: <FaHome size="28" />,
-        text: "Welcome Back! 😮",
-        id: 2,
-        on: false,
-        dir: 'home'
-    },
-    {
-        icon: <FaInfo size="28" />,
-        text: "Learn more about me! 😊",
-        id: 3,
-        on: false,
-        dir: 'about'
-    },
-    {
-        icon: <FaPlus size="28" />,
-        text: "Let's Connect! 🤗",
-        id: 4,
-        on: false,
-        dir: 'contact'
-    },
+    createMenuItem(<FaCoffee size="28" />, "Hi There! I am Guijun 😄", 1, false, ''),
+    createMenuItem(<FaHome size="28" />, "Welcome Back! 😮", 2, false, 'home'),
+    createMenuItem(<FaInfo size="28" />, "Learn more about me! 😊", 3, false, 'about'),
+    createMenuItem(<FaFolder size="28" />, "Explore some of my projects! 🧐", 4, false, 'projects'),
+    createMenuItem(<FaPlus size="28" />, "Let's Connect! 🤗", 5, false, 'contact')
+    
 ]

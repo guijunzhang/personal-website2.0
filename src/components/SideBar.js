@@ -15,7 +15,7 @@ export default function SideBar() {
             };
           });
         });
-      }
+    }
     const cubeSidebar = tabs.slice(0,1).map(tab => (
         <SideBarIcon
             icon={tab.icon}
