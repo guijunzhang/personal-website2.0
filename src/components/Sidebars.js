@@ -6,14 +6,14 @@ export default [
         icon: <FaCube size="28" />,
         text: "Hi There! I am Guijun 😄",
         id: 1,
-        on: false,
+        on: true,
         dir: ''
     },
     {
         icon: <FaHome size="28" />,
         text: "Welcome Back! 😮",
         id: 2,
-        on: true,
+        on: false,
         dir: 'home'
     },
     {
