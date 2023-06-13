@@ -1,10 +1,16 @@
 import '@/styles/globals.css'
+import SideBar from "../components/SideBar"
 import Head from 'next/head'
 import { Open_Sans } from 'next/font/google'
 
+import Home from '../pages/index'
+import About from '../pages/about'
+import Contact from '../pages/contact'
+
 const openSans = Open_Sans({
   subsets:['latin'],
-  weight: '400'
+  weight: ['400', '800'],
+  style: ['normal']
 })
 
 export default function App({ Component, pageProps }) {
@@ -24,9 +30,11 @@ export default function App({ Component, pageProps }) {
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
-      <main className={openSans.className}>
-        <Component {...pageProps} />
-      </main>
+        <main className={openSans.className}>
+            <SideBar />
+            <Component {...pageProps} />
+            
+        </main>
     </>
   )
 }
