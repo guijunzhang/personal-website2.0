@@ -1,21 +1,29 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import { useRouter } from 'next/router';
 
 import SideBarIcon from "./SideBarIcon"
 import Sidebars from './Sidebars'
 import Divider from "./Divider"
 
-export default function SideBar() {
+export default function SideBar() {    
     const [tabs, setTabs] = useState(Sidebars)
+    const router = useRouter();
+
     function toggle(id) {
         setTabs(prevTabs => {
           return prevTabs.map((tab) => {
             return {
               ...tab,
-              on: tab.id === id
+              on: router.pathname === "/" + tab.dir
             };
           });
         });
     }
+
+    useEffect(() => {
+        toggle(router.pathname);
+    }, [router.pathname]);
+
     const cubeSidebar = tabs.slice(0,1).map(tab => (
         <SideBarIcon
             icon={tab.icon}

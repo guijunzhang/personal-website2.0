@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export default function SideBarIcon(props) {
     return (
-        <Link href={"/" + `${props.dir}`}>
+        <Link href={"/"+`${props.dir}`}>
             <div 
                 className={
                     "sidebar-icon group " + 
